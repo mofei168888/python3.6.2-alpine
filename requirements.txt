@@ -1,7 +1,1 @@
-pandas
-re
 numpy
-tushare
-pytdx
-sqlalchemy
-pymysql
