@@ -7,4 +7,8 @@ COPY main.py /
 ADD requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
+
+EXPOSE 80
+
+
 ENTRYPOINT ["python", "/main.py"]
