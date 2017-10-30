@@ -2,9 +2,9 @@ FROM daocloud.io/ubuntu:16.04
 
 
 
-RUN apt-get update && apt-get upgrade yes
+RUN apt-get update
 RUN apt-get install -y python3 && \
-    python-pip
+     apt-get install -y python-pip
 
 RUN  mkdir -p /app
 
