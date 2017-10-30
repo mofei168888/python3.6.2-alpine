@@ -22,4 +22,4 @@ COPY main.py /app
 EXPOSE 80
 
 
-ENTRYPOINT ["python", "/main.py"]
+ENTRYPOINT ["python", "/app/main.py"]
