@@ -17,7 +17,7 @@ COPY requirements.txt /app
 RUN cd /app && pip install -r base.txt
 RUN cd /app && pip install -r requirements.txt
 
-COPY main.py /app
+COPY /app/main.py /app
 
 EXPOSE 80
 
