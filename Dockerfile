@@ -2,7 +2,8 @@ FROM daocloud.io/ubuntu:16.04
 
 
 
-RUN apt-get update
+RUN apt-get update && apt-get upgrade
+RUN yes
 RUN apt-get install -y python3 && \
     python-pip
 
