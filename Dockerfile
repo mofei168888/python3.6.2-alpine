@@ -1,12 +1,23 @@
-FROM python:3.6.2-alpine
+FROM daocloud.io/ubuntu:16.04
 
 
 
-COPY main.py /
-#COPY requirements.txt
-ADD requirements.txt requirements.txt
-RUN pip install -r requirements.txt
+RUN apt-get update && apt-get upgrade
+RUN apt-get install -y python3 && \
+    python3-pip
 
+RUN  mkdir -p /app
+
+WORKDIR /app
+
+
+COPY base.txt /app
+COPY requirements.txt /app
+
+RUN cd /app && pip install -r base.txt
+RUN cd /app && pip install -r requirements.txt
+
+COPY main.py /app
 
 EXPOSE 80
 
